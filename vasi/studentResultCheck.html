@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="text/javascript">
+        var students=[
+            {
+                id:1,
+                name:"vimal",
+                subject1:"100",
+                subject2:"100",
+                subject3:"100"
+            },{
+                id:2,
+                name:"vimalesan",
+                subject1:"35",
+                subject2:"35",
+                subject3:"35"
+            },{
+                id:3,
+                name:"vim",
+                subject1:"10",
+                subject2:"20",
+                subject3:"35"
+            }
+        ]
+
+        var studentResults = students.map(function(stduent){
+            var result = 'pass';
+            if (stduent.subject1 < 35 || stduent.subject2 < 35 || stduent.subject3 < 35 ){
+                result = 'fail';
+            }
+            return {
+                id: stduent.id,
+                name: stduent.name,
+                result: result
+            }
+        })
+
+        console.log(studentResults);
+
+        </script>
+    </body>
+</html>

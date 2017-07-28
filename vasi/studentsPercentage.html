@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Average Percentage</h1>
+        <script type="text/javascript">
+        var students=[
+            {
+                id:1,
+                name:"vimal",
+                subject1:"100",
+                subject2:"100",
+                subject3:"100"
+            },{
+                id:2,
+                name:"vimalesan",
+                subject1:"35",
+                subject2:"35",
+                subject3:"35"
+            },{
+                id:3,
+                name:"vim",
+                subject1:"10",
+                subject2:"20",
+                subject3:"35"
+            }
+        ]
+
+        var studentPercentage = students.reduce(function(totalPercentage, stduent){
+            var percentage = (Number(stduent.subject1) + Number(stduent.subject2) + Number(stduent.subject3)) / 3;
+            return totalPercentage + percentage;
+        }, 0)
+
+        console.log(studentPercentage/students.length);
+
+        </script>
+    </body>
+</html>
